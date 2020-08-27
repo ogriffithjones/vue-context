@@ -12,7 +12,7 @@ Simple, custom context menu for Vue.js. allows multiple options deep and handles
 
 ### Demo
 
-[Comming Soon!](https://github.com/ogriffithjones)
+[Coming Soon!](https://github.com/ogriffithjones)
 
 <!-- [View demo](https://johndatserakis.github.io/vue-simple-context-menu/)
 
@@ -24,10 +24,10 @@ Simple, custom context menu for Vue.js. allows multiple options deep and handles
 
 ```
 # npm
-Comming Soon!
+Coming Soon!
 
 # yarn
-Comming Soon!
+Coming Soon!
 ```
 
 <!-- Or you can include it through the browser at the bottom of your page along with the css: -->
