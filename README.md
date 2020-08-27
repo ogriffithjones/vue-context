@@ -1,4 +1,4 @@
-# vue-simple-context-menu
+# Vue Context Menu
 
 Simple, custom context menu for Vue.js. allows multiple options deep and handles both left and right clicks. Extends vue-simple-context-menu.
 
