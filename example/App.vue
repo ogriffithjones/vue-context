@@ -217,6 +217,10 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Muli:400,700");
 
+.my-custom-class {
+  color: red;
+}
+
 html {
   width: 100%;
   font-size: 18px;

@@ -1,17 +1,21 @@
 <template>
-  <li v-if="option.options" class="vue-simple-context__item">
+  <!-- If the option has further options -->
+  <li v-if="option.options" :class="vcstyle.item">
     {{ option.name }}
 
-    <ul class="vue-simple-context-submenu">
+    <ul :class="vcstyle.submenu">
       <MenuOption
         v-for="(option, index) in option.options"
         :key="index"
         :option="option"
+        :handle-click="handleClick"
+        :vcstyle="vcstyle"
       />
     </ul>
   </li>
 
-  <li v-else class="vue-simple-context__item">
+  <!-- Else show the option with a click handler -->
+  <li v-else :class="vcstyle.item" @click.stop="handleClick(option)">
     {{ option.name }}
   </li>
 </template>
@@ -21,7 +25,12 @@ export default {
   name: "MenuOption",
   props: {
     option: {
-      type: Array,
+      type: Object,
+      required: true
+    },
+    handleClick: Function,
+    vcstyle: {
+      type: Object,
       required: true
     }
   }

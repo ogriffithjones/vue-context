@@ -2,15 +2,15 @@
   <div>
     <ul
       :id="elementId"
-      class="vue-simple-context-menu"
+      class="vc-menu"
       v-click-outside="onClickOutside"
     >
       <MenuOption
         v-for="(option, index) in options"
         :key="index"
         :option="option"
-        @click.stop="optionClicked(option)"
-        :class="option.class"
+        :handle-click="optionClicked"
+        :vcstyle="{item: option.class || 'vc-menu__item', submenu: 'vc-menu__submenu'}"
       />
     </ul>
   </div>
@@ -74,12 +74,12 @@ export default {
         menu.style.top = event.pageY - 2 + "px";
       }
 
-      menu.classList.add("vue-simple-context-menu--active");
+      menu.classList.add("vc-menu--active");
     },
     hideContextMenu() {
       let element = document.getElementById(this.elementId);
       if (element) {
-        element.classList.remove("vue-simple-context-menu--active");
+        element.classList.remove("vc-menu--active");
       }
     },
     onClickOutside() {
@@ -114,7 +114,7 @@ $blue: #007aff;
 $white: #fff;
 $black: #333;
 
-.vue-simple-context-menu {
+.vc-menu {
   top: 0;
   left: 0;
   margin: 0;
