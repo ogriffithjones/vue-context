@@ -1,40 +1,43 @@
 # vue-simple-context-menu
 
-Simple context-menu component built for Vue. Works well with both left and right clicks. Nothing too fancy, just works and is simple to use.
+Simple, custom context menu for Vue.js. allows multiple options deep and handles both left and right clicks. Extends vue-simple-context-menu.
 
-<p align="left">
+<!-- <p align="left">
   <a href="https://www.npmjs.com/package/vue-simple-context-menu"><img src="https://img.shields.io/npm/v/vue-simple-context-menu.svg" alt="NPM Version"></a>
   <a href="https://www.npmjs.com/package/vue-simple-context-menu"><img src="https://img.shields.io/npm/dm/vue-simple-context-menu.svg" alt="NPM Downloads"></a>
   <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjohndatserakis%2Fvue-simple-context-menu&text=Check%20out%20vue-simple-context-menu%20on%20GitHub&via=johndatserakis">
   <img src="https://img.shields.io/twitter/url/https/github.com/johndatserakis/vue-simple-context-menu.svg?style=social" alt="Tweet"></a>
-</p>
+</p> -->
 
 ### Demo
 
-[View demo](https://johndatserakis.github.io/vue-simple-context-menu/)
+[Comming Soon!](https://github.com/ogriffithjones)
 
-[View on npm](https://www.npmjs.com/package/vue-simple-context-menu)
+<!-- [View demo](https://johndatserakis.github.io/vue-simple-context-menu/)
 
-[View on GitHub](https://github.com/johndatserakis/vue-simple-context-menu)
+[View on npm](https://www.npmjs.com/package/vue-simple-context-menu) -->
+
+[View on GitHub](https://github.com/ogriffithjones/vue-contextmenu)
 
 ### Install
 
 ```
 # npm
-npm i vue-simple-context-menu
+Comming Soon!
 
 # yarn
-yarn add vue-simple-context-menu
+Comming Soon!
 ```
 
-Or you can include it through the browser at the bottom of your page along with the css:
+<!-- Or you can include it through the browser at the bottom of your page along with the css: -->
 
-```html
+<!-- ```html
 <script src="https://unpkg.com/vue-simple-context-menu/dist/vue-simple-context-menu.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-simple-context-menu/dist/vue-simple-context-menu.css">
-```
+``` -->
+
 
 ### About
 
@@ -149,13 +152,9 @@ npm run build:library
 npm run build
 ```
 
-### Other
-
-Go ahead and fork the project! Submit an issue if needed. Have fun!
-
 ### Thank You
 
-Influenced by [Lucas Calazans](https://codepen.io/lucascalazans)'s [pen](https://codepen.io/lucascalazans/pen/ALvVVw). Go ahead and check out his other work.
+Extended from [Johndatserakis](https://github.com/johndatserakis)'s [vue-simple-context-menu](https://github.com/johndatserakis/vue-simple-context-menu). Checkout the original repo.
 
 ### License
 
