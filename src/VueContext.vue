@@ -1,16 +1,16 @@
 <template>
   <div>
-    <ul
-      :id="elementId"
-      class="vc-menu"
-      v-click-outside="onClickOutside"
-    >
+    <ul :id="elementId" class="vc-menu" v-click-outside="onClickOutside">
       <MenuOption
         v-for="(option, index) in options"
         :key="index"
         :option="option"
         :handle-click="optionClicked"
-        :vcstyle="{item: option.class || 'vc-menu__item', submenu: 'vc-menu__submenu'}"
+        :vcstyle="{
+          item: option.class || 'vc-menu__item',
+          submenu: 'vc-menu__submenu',
+          symbol: 'vc-menu__symbol'
+        }"
       />
     </ul>
   </div>
@@ -21,28 +21,29 @@ import Vue from "vue";
 import vClickOutside from "v-click-outside";
 Vue.use(vClickOutside);
 
-import MenuOption from "./vue-contextmenu-option";
+import MenuOption from "./VueContextOption";
 
 export default {
-  name: "VueSimpleContextMenu",
+  name: "VueContext",
   components: {
-    MenuOption: MenuOption,
+    MenuOption: MenuOption
   },
   props: {
     elementId: {
       type: String,
-      required: true,
+      required: true
     },
     options: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
       item: null,
       menuWidth: null,
       menuHeight: null,
+      submenuWidth: null,
     };
   },
   methods: {
@@ -50,6 +51,7 @@ export default {
       this.item = item;
 
       var menu = document.getElementById(this.elementId);
+
       if (!menu) {
         return;
       }
@@ -89,75 +91,117 @@ export default {
       this.hideContextMenu();
       this.$emit("option-clicked", {
         item: this.item,
-        option: option,
+        option: option
       });
     },
     onEscKeyRelease(event) {
       if (event.keyCode === 27) {
         this.hideContextMenu();
       }
-    },
+    }
   },
   mounted() {
     document.body.addEventListener("keyup", this.onEscKeyRelease);
   },
   beforeDestroy() {
     document.removeEventListener("keyup", this.onEscKeyRelease);
-  },
+  }
 };
 </script>
 
 <style lang="scss">
-$light-grey: #ecf0f1;
-$grey: darken($light-grey, 15%);
-$blue: #007aff;
-$white: #fff;
-$black: #333;
+$main: #f9fafa;
+$secondary: #f3f3f5;
+$text: #545454;
+$text--active: #716fff;
+
+$main__dark: #1b1c1d;
+$secondary__dark: #0f0f10;
+$text__dark: #ebebeb;
 
 .vc-menu {
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
+  // Display
   display: none;
   list-style: none;
-  position: absolute;
-  z-index: 1000000;
-  background-color: $light-grey;
-  border-bottom-width: 0px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  box-shadow: 0 3px 6px 0 rgba($black, 0.2);
-  border-radius: 4px;
+  z-index: 999;
 
   &--active {
     display: block;
   }
 
+  // Size
+  margin: 0;
+  padding: 12px;
+  width: auto;
+
+  // Position
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  // Border
+  border-bottom: unset;
+  border-radius: 13px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.13);
+
+  // Text
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Helvetica Neue", sans-serif;
+
+  // Color
+  background-color: $main;
+
+  // Item
   &__item {
     display: flex;
-    color: $black;
+    color: $text;
     cursor: pointer;
-    padding: 5px 15px;
     align-items: center;
+    padding: 10px 13px;
+    border-radius: 11px;
+    position: relative;
 
     &:hover {
-      background-color: $blue;
-      color: $white;
+      background-color: $secondary;
+      color: $text--active;
     }
   }
 
-  // Have to use the element so we can make use of `first-of-type` and
-  // `last-of-type`
+  &__symbol {
+    padding-left: 23px;
+    float: right;
+    opacity: 50%;
+  }
+
   li {
     &:first-of-type {
-      margin-top: 4px;
+      margin-top: 3px;
     }
-
     &:last-of-type {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
   }
+
+  &__submenu {
+
+    // Size
+    margin: 0;
+    padding: 12px;
+
+    // Position
+    position: absolute;
+    top: -10px;
+    left: calc(100% + 13px);
+
+    // Border
+    border-bottom: unset;
+    border-radius: 13px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.13);
+
+    // Text
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Helvetica Neue", sans-serif;
+
+    // Color
+    background-color: $main;
+    }
 }
 </style>

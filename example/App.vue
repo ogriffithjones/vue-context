@@ -168,6 +168,7 @@ export default {
         {
           name: "Duplicate",
           slug: "duplicate",
+          symbol: "Shift + L"
         },
         {
           name: "Edit",
@@ -178,8 +179,8 @@ export default {
           slug: "delete",
           options: [
             {
-              name: "Delete 2",
-              slug: "delete"
+              name: "Trash",
+              slug: "Trash"
             }
           ]
         },

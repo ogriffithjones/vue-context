@@ -16,7 +16,8 @@
 
   <!-- Else show the option with a click handler -->
   <li v-else :class="vcstyle.item" @click.stop="handleClick(option)">
-    {{ option.name }}
+    {{ option.name }} 
+    <span :class="vcstyle.symbol">{{ option.symbol }}</span>
   </li>
 </template>
 
