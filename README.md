@@ -14,7 +14,7 @@
     <img src="./example/vuecontext.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">Vue Context</h3>
+  <h2 align="center">Vue Context</h2>
 
   <p align="center">
     A simple context-menu for your vue projects!
