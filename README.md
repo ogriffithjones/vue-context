@@ -1,163 +1,185 @@
-# Vue Context Menu
-
-Simple, custom context menu for Vue.js. allows multiple options deep and handles both left and right clicks. Extends vue-simple-context-menu.
-
-<!-- <p align="left">
-  <a href="https://www.npmjs.com/package/vue-simple-context-menu"><img src="https://img.shields.io/npm/v/vue-simple-context-menu.svg" alt="NPM Version"></a>
-  <a href="https://www.npmjs.com/package/vue-simple-context-menu"><img src="https://img.shields.io/npm/dm/vue-simple-context-menu.svg" alt="NPM Downloads"></a>
-  <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
-  <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjohndatserakis%2Fvue-simple-context-menu&text=Check%20out%20vue-simple-context-menu%20on%20GitHub&via=johndatserakis">
-  <img src="https://img.shields.io/twitter/url/https/github.com/johndatserakis/vue-simple-context-menu.svg?style=social" alt="Tweet"></a>
-</p> -->
-
-### Demo
-
-[Coming Soon!](https://github.com/ogriffithjones)
-
-<!-- [View demo](https://johndatserakis.github.io/vue-simple-context-menu/)
-
-[View on npm](https://www.npmjs.com/package/vue-simple-context-menu) -->
-
-[View on GitHub](https://github.com/ogriffithjones/vue-contextmenu)
-
-### Install
-
-```
-# npm
-Coming Soon!
-
-# yarn
-Coming Soon!
-```
-
-<!-- Or you can include it through the browser at the bottom of your page along with the css: -->
-
-<!-- ```html
-<script src="https://unpkg.com/vue-simple-context-menu/dist/vue-simple-context-menu.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-simple-context-menu/dist/vue-simple-context-menu.css">
-``` -->
+<!-- [![Contributors][contributors-shield]][contributors-url] -->
+<!-- [![Forks][forks-shield]][forks-url] -->
+<!-- [![Stargazers][stars-shield]][stars-url] -->
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-### About
 
-Just a simple little menu to be shown where a click happens - closes after use automatically by clicking an option or outside of the menu. Multiple menus are supported - just make sure to use a unique string as your `elementId` prop value.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="#">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-A nice feature that comes baked in is the menu placement after a click - it sits just ever so slightly under your click location - so that any hover style you had on the item that was clicked gets removed nicely. I modeled it after the macOS right click menu.
+  <h3 align="center">Vue Context</h3>
 
-### Usage Example
+  <p align="center">
+    A simple context-menu for your vue projects!
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
+</p>
 
-```html
-<!-- css import for when you want to import the component css into your css file/files  -->
-@import '/path/to/node_modules/vue-simple-context-menu.css';
 
-<!-- css import for when you're importing the css directly in your js  -->
-import 'vue-simple-context-menu/dist/vue-simple-context-menu.css'
 
-import VueSimpleContextMenu from 'vue-simple-context-menu'
-Vue.component('vue-simple-context-menu', VueSimpleContextMenu)
-```
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-```html
-<!-- This is a basic use case where you have an array of items that you want
-to allow to be clicked. In this case, `items` is an array of objects.
-Each item has a click event that ties to a function. See the demo for a full example (with multiple menus as well). -->
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-<div class="item-wrapper">
-  <div v-for="item in items" @click.prevent.stop="handleClick($event, item)" class="item-wrapper__item">
-    {{item.name}}
-  </div>
-</div>
 
-<!-- Make sure you add the `ref` attribute, as that is what gives you the ability
-to open the menu. -->
 
-<vue-simple-context-menu
-  :elementId="'myUniqueId'"
-  :options="options"
-  :ref="'vueSimpleContextMenu'"
-  @option-clicked="optionClicked"
-/>
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-<!-- The click-handler function -->
-handleClick (event, item) {
-  this.$refs.vueSimpleContextMenu.showMenu(event, item)
-}
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-<!-- And for capturing the event -->
-optionClicked (event) {
-  window.alert(JSON.stringify(event))
-}
+There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should element DRY principles to the rest of your life :smile:
+
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+
+A list of commonly used resources that I find helpful are listed in the acknowledgements.
+
+### Built With
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+* [Laravel](https://laravel.com)
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+```sh
+npm install npm@latest -g
 ```
 
-Note - you must pass the click event-info variable to the `showMenu()` function because that's how we know where to show the menu.
+### Installation
 
-Note - make sure to use `@click.prevent.stop` (or `@contextmenu.prevent.stop` for right click) when setting up the click handler.
-
-### Props
-
-| prop    | type  | description | required |
-|---------|-------|--------------------------------|---|
-| elementId | String | Unique String that acts as the id of your menu. | Yes |
-| options | Array | Array of menu options to show. Component will use the `name` parameter as the label. | Yes |
-| options.name | Array | Label for the option. | Yes |
-| options.class | String | A custom class that will be applied to the option. | No |
-| ref | String | Unique String that allows you to show the menu on command. | Yes |
-
-### Methods
-
-| method    | parameters  | description                    |
-|---------|-------|--------------------------------|
-| showMenu |event (MouseEvent), item (Object) | Used to show the menu. Make sure to pass a MouseEvent and an Object. |
-
-### Events
-
-| event    | value  | description                    |
-|---------|-------|--------------------------------|
-| option-clicked | Object | When a menu item is clicked the component will emit an event with a value containing the clicked item and the menu option that was clicked. Register for this event to capture the selection result. |
-
-### SASS Structure
-
-```sass
-.vue-simple-context-menu {
-  &--active {
-  }
-
-  &__item {
-    &:hover {
-    }
-  }
-}
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+```sh
+git clone https://github.com/your_username_/Project-Name.git
 ```
-
-### Development
-
-``` bash
-# install dependencies
+3. Install NPM packages
+```sh
 npm install
-
-# serve with hot reload
-npm run watch
-
-# run the tests
-npm run test
-
-# build demo page
-npm run build:example
-
-# build library
-npm run build:library
-
-# build everything and run tests
-npm run build
+```
+4. Enter your API in `config.js`
+```JS
+const API_KEY = 'ENTER YOUR API';
 ```
 
-### Thank You
 
-Extended from [Johndatserakis](https://github.com/johndatserakis)'s [vue-simple-context-menu](https://github.com/johndatserakis/vue-simple-context-menu). Checkout the original repo.
 
-### License
+<!-- USAGE EXAMPLES -->
+## Usage
 
-[MIT](http://opensource.org/licenses/MIT)
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-Packaged with a mixture of [vue-lib-template](https://github.com/biigpongsatorn/vue-lib-template) and [vue-sfc-rollup](https://github.com/team-innovation/vue-sfc-rollup).
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Img Shields](https://shields.io)
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Pages](https://pages.github.com)
+* [Animate.css](https://daneden.github.io/animate.css)
+* [Loaders.css](https://connoratherton.com/loaders)
+* [Slick Carousel](https://kenwheeler.github.io/slick)
+* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+* [Sticky Kit](http://leafo.net/sticky-kit)
+* [JVectorMap](http://jvectormap.com)
+* [Font Awesome](https://fontawesome.com)
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/othneildrew
+[product-screenshot]: images/screenshot.png
