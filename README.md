@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="https://imgur.com/TQpmwIW" alt="Logo" width="80" height="80">
+    <img src="./example/vuecontext.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Vue Context</h3>
