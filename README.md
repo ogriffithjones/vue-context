@@ -173,8 +173,8 @@ Project Link: [github.com/ogriffithjones/vue-contextmenu/](https://github.com/og
 [forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
 [stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-shield]: https://img.shields.io/github/issues/ogriffithjones/vue-contextmenu.svg?style=flat-square
+[issues-url]: https://github.com/ogriffithjones/vue-contextmenu/
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [twitter-shield]: https://img.shields.io/twitter/follow/OlzGJ?label=Follow
