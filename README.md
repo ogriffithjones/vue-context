@@ -94,15 +94,14 @@ yarn global add @vue/cli
 1. Clone the repo
 ```sh
 git clone https://github.com/ogriffithjones/vue-contextmenu
-cd vue-contextmenu
 ```
 2. Install NPM packages
 ```sh
-npm install
+cd vue-contextmenu && npm install
 ```
 3. Run the example
 ```sh
-cd vue-contextmenu/examples && npm run watch
+cd examples && npm run watch
 ```
 
 
